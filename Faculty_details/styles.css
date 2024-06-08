@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+
+/* .header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3a7ad9;
+    color: white;
+} */
+/* .header {
+
+    text-align: center;
+    padding: 20px;
+    background-color: #46a3eb;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 80%;
+}
+
+.vision {
+    text-align: center;
+    padding: 20px;
+    background-color: #46a3eb;
+    color: #000000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    width: 80%;
+} */
+
+
+.header-box {
+    width: 80%; /* Ensure the same width for both header and vision boxes */
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #2e4d6a, #4673A2, #5b8db8, #4673A2, #2e4d6a); /* Metallic gradient effect with the color tone #4673A2 */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    text-align: center;
+    --header-text-color: #ffffff; /* White text color for contrast */
+    color: var(--header-text-color);
+    border-radius: 10px; /* Rounded corners for a modern look */
+    border: 1px solid #d1d1d1; /* Border to enhance the metallic effect */
+    position: relative;
+    z-index: 2; /* Ensure it appears above the vision box */
+}
+
+.header-box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 50%);
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.header-box h1 {
+    margin: 0;
+    font-size: 2em; /* Larger font size for emphasis */
+    letter-spacing: 2px; /* Spacing for a more dramatic effect */
+    text-transform: uppercase; /* Uppercase for a bold look */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Dark shadow for 3D effect */
+}
+
+.vision-box {
+    width: 80%; /* Ensure the same width for both header and vision boxes */
+    margin: -10px auto 20px; /* Adjust margin to bring it closer to the header */
+    padding: 20px;
+    background-color: #4673A2; /* Background color */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+    color: #ffffff; /* White text color */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    border: 1px solid #ffffff; /* Border to match the header box */
+    position: relative;
+    top: -20px; /* Positioning to move the box up behind the header box */
+    z-index: 1; /* Ensure it appears behind the header box */
+    text-align: center;
+}
+
+.vision-box h2 {
+    margin: 0 0 10px;
+    font-size: 1.5em; /* Slightly smaller than the main header */
+    letter-spacing: 1px; /* Spacing for a more dramatic effect */
+    text-transform: uppercase; /* Uppercase for a bold look */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow for subtle effect */
+    color: #ffffff; /* Set h2 text color to white */
+}
+
+.vision-box p {
+    margin: 0;
+    font-size: 1em; /* Normal font size for the vision text */
+    line-height: 1.5em; /* Line height for better readability */
+    color: #ffffff; /* Set p text color to white */
+}
+
+.container {
+    width: 80%; /* Adjust the width to your desired size */
+    height: auto; /* Adjust the height to your desired size */
+    margin: 50px auto;
+    background-color: #fff;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.faculty {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faculty img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.faculty-info {
+    flex-grow: 1;
+}
+
+h2, p {
+    margin: 5px 0;
+}
