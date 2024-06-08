@@ -1,0 +1,1096 @@
+/* CSS for fade-in/fade-out transition */
+body {
+  font-family: "Orbitron", sans-serif;
+  color: #000000;
+}
+
+.section {
+  display: none;
+}
+
+#home {
+  display: block;
+}
+
+/* section */
+section {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  opacity: 0; /* Initially transparent */
+  transition: opacity 3s ease-in-out; /* Longer duration and easing */
+  width: auto;
+}
+
+/*Header and nav bar*/
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  color: #000000;
+  text-align: right;
+  backdrop-filter: blur(15px);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.5); /* Shadow applied only to bottom */
+}
+
+/* Navigation bar */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 10px;
+  text-align: right;
+  margin-right: 200px;
+  color: rgb(55, 55, 55);
+  position: relative;
+}
+
+nav li {
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-left: 10px;
+  position: relative;
+}
+
+nav button {
+  text-decoration: none;
+  color: #000000;
+  font-size: 11px;
+  transition: color 0.3s, transform 0.5s, font-size 0.7s, background-color 0.3s;
+  background-color: transparent;
+  border: none;
+  font-family: "Orbitron", sans-serif;
+  position: relative;
+  padding: 45px 15px;
+  border-radius: 0; /* Reset border radius */
+  border-bottom-left-radius: 15px; /* Apply border radius to bottom-left corner */
+  border-bottom-right-radius: 15px; /* Apply border radius to bottom-right corner */
+}
+
+nav button:hover {
+  color: #000000;
+  font-size: 13px;
+  background-color: #ddefff; /* Light blue background on hover */
+}
+
+nav button:active,
+nav button:focus {
+  background-color: #4673a2; /* Dark blue background for active/current page */
+  font-size: 13px;
+  color: rgb(
+    255,
+    255,
+    255
+  ); /* Change text color to white for better contrast */
+}
+
+#logo:hover {
+  transform: scale(1.1);
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-family: "Orbitron", sans-serif;
+  font-size: 11px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-content button:hover {
+  background-color: #e0f0ff; /* Light blue background on hover */
+}
+
+.dropdown-content button.active,
+.dropdown-content button:focus {
+  background-color: #4673a2; /* Blue background for active/current page */
+  color: white; /* Change text color to white for better contrast */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* CSS for logo */
+.logo {
+  position: fixed; /* Fixed positioning */
+  top: 0; /* Adjust the top value as needed for vertical positioning */
+  left: 120px; /* Adjust the left value as needed for horizontal positioning */
+  z-index: 999; /* Ensure it's above other elements */
+  width: 200px; /* Adjust the width as needed */
+  height: 130px; /* Maintain aspect ratio */
+  opacity: 80%;
+}
+
+/* CSS for sign up and login buttons */
+.nav-item a,
+.nav-name {
+  text-decoration: none;
+  color: #000000;
+  font-size: 11px;
+  transition: color 0.3s, background-color 0.3s;
+  padding: 45px 15px;
+  display: inline-block;
+  font-family: "Orbitron", sans-serif;
+  position: relative;
+  border-radius: 0;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.nav-item a:hover,
+.nav-name:hover {
+  color: #000000;
+  font-size: 13px;
+  background-color: #ddefff; /* Light blue background on hover */
+}
+
+.nav-item a:active,
+.nav-item a:focus,
+.nav-name:active,
+.nav-name:focus {
+  background-color: #4673a2; /* Dark blue background for active/current page */
+  font-size: 13px;
+  color: rgb(
+    255,
+    255,
+    255
+  ); /* Change text color to white for better contrast */
+}
+
+.nav-name {
+  display: inline-block;
+  font-size: 13px;
+  margin-top: 5px;
+  margin-left: 10px;
+  position: relative;
+  font-family: "Orbitron", sans-serif;
+  padding: 45px 15px;
+}
+
+/*body*/
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth; /* Enable smooth scrolling behavior */
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default padding */
+  filter: brightness(100%);
+  overflow-x: hidden;
+}
+
+/*Home*/
+#home {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Ensure the section takes up the full viewport height */
+}
+
+#home h2 {
+  color: black; /* Start with transparent text */
+  padding: 10px; /* Add padding for better visibility */
+  font-size: 80px; /* Adjust the font size of the club name */
+  margin: 0; /* Remove default margin to eliminate spacing */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For compatibility with some browsers */
+  display: inline-block;
+  position: absolute; /* Add relative positioning to create pseudo-element */
+  top: 0;
+  text-align: center;
+  line-height: 100vh;
+}
+
+/* About */
+#about {
+  height: 100vh;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#about h2 {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 40px;
+  margin: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  position: relative;
+}
+
+#about p {
+  font-size: 17px;
+  margin-top: 0;
+  color: rgb(0, 0, 0);
+  text-align: center; /* Center the text */
+}
+
+/*about contact button*/
+.cm {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  padding: 1em 2.7em;
+  font-weight: 500;
+  background: #e0f0ff; /* Light blue background */
+  border: none;
+  position: fixed; /* Change to fixed position */
+  overflow: hidden;
+  border-radius: 0.6em;
+  /* Adjust the top and left properties to center the button */
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cm a {
+  text-decoration: none;
+  color: rgb(0, 0, 0); /* Set default font color to black */
+}
+
+.cm a:hover {
+  color: white;
+}
+
+.gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  border-radius: 0.6em;
+  margin-top: -0.25em;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(224, 240, 255, 0.3)
+  ); /* Light blue gradient */
+}
+
+.label {
+  position: relative;
+  top: -1px;
+}
+
+.transition {
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  transition-duration: 500ms;
+  background-color: #4673a2; /* Adjusted purple background color */
+  border-radius: 9999px;
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cm:hover .transition {
+  width: 14em;
+  height: 14em;
+}
+
+.cm:hover .gradient {
+  background-image: #4673a2; /* Light blue gradient on hover */
+}
+
+.cm:active {
+  transform: scale(0.97);
+}
+
+/*Announcements*/
+#announcements {
+  height: 100vh;
+}
+
+#announcements h2 {
+  color: rgb(0, 0, 0); /* Start with transparent text */
+  padding: 10px; /* Add padding for better visibility */
+  padding-top: 40px;
+  font-size: 40px; /* Adjust the font size of the club name */
+  margin: 0; /* Remove default margin to eliminate spacing */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For compatibility with some browsers */
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  position: relative; /* Add relative positioning to create pseudo-element */
+}
+
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.custom-list li {
+  padding-left: 40px; /* Adjust as needed */
+  color: #000000;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.custom-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  transform: translateY(-50%);
+  width: 15px; /* Adjust arrow width */
+  height: 15px; /* Adjust arrow height */
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+
+.abcontainer {
+  display: flex;
+  text-align: left;
+  gap: 30px;
+  height: 80%;
+  padding: 20px;
+  opacity: 0.5;
+  justify-content: space-between;
+}
+
+.card1 {
+  width: 100%;
+  background: rgb(0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+}
+
+/*Our Team*/
+#previous-events {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  position: relative;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.banner-container {
+  background-image: url("../images3/bg.png");
+  background-attachment: fixed;
+  margin-top: 30px;
+  box-shadow: inset 0 0 0 2000px #1c1c1c7a;
+  text-align: center;
+  padding: 160px 15px;
+}
+
+.city-search {
+  max-width: 530px;
+  margin: auto;
+  position: relative;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* clubs */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.city-card-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .col-md {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+}
+/* previous events continue */
+#previous-events h1 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: 600;
+}
+
+#previous-events h2 {
+  font-weight: 600;
+}
+
+.input-group .input-group-text i {
+  width: 14px;
+}
+
+input[type="radio"] {
+  position: relative;
+  top: 1px;
+}
+
+.container {
+  max-width: 920px;
+  padding: 0px 20px;
+}
+
+.page-container {
+  max-width: 800px;
+  padding: 80px 24px;
+  margin: auto;
+}
+
+.white {
+  color: #ffffff;
+}
+
+/* Footer */
+.footer {
+  background-color: #333333;
+  font-size: 13px;
+}
+
+.footer-container {
+  padding: 24px;
+}
+
+.footer-cities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.footer-city {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .footer-city {
+    width: 100%;
+  }
+}
+
+.footer-city a {
+  color: #ffffff;
+}
+
+.footer-copyright {
+  color: #a9a9a9;
+  text-align: center;
+  padding-top: 24px;
+}
+
+/*Rules*/
+#rules {
+  height: 100vh;
+  margin-top: 50px;
+}
+
+#rules h2 {
+  color: rgb(0, 0, 0); /* Start with transparent text */
+  padding: 10px; /* Add padding for better visibility */
+  font-size: 40px; /* Adjust the font size of the club name */
+  margin: 0; /* Remove default margin to eliminate spacing */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For compatibility with some browsers */
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  width: 100%;
+}
+
+.container1 {
+  display: flex;
+  text-align: left;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-right: 20px;
+  padding-top: 10px;
+  padding-right: 20px;
+  padding-bottom: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.card *:not(h2):not(h3) {
+  z-index: 1;
+  font-size: 1em;
+  position: relative;
+  margin-left: 20px;
+}
+
+#rules p {
+  font-size: 16px;
+  color: rgb(0, 0, 0); /* Set text color for p to white */
+}
+
+#rules li {
+  font-size: 14px;
+  color: rgb(0, 0, 0); /* Set text color for li to the specified color */
+}
+
+/*Contact*/
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#contact h2 {
+  color: rgb(0, 0, 0); /* Start with transparent text */
+  padding: 10px; /* Add padding for better visibility */
+  font-size: 40px; /* Adjust the font size of the club name */
+  margin: 0; /* Remove default margin to eliminate spacing */
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For compatibility with some browsers */
+  display: inline-block;
+  font-family: "Cormorant Garamond", serif;
+  width: 100%;
+  top: 200px;
+  position: relative;
+}
+
+/*Social media*/
+#contact * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#contact .social-buttons {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  justify-content: center; /* Center the items horizontally */
+  align-items: center; /* Center the items vertically */
+  padding-top: 230px; /* Adjust the padding as needed */
+}
+
+.social-buttons .item a {
+  cursor: pointer;
+  text-decoration: none;
+  width: 4.8rem;
+  height: 4.8rem;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #f0f9fe;
+  overflow: hidden;
+}
+
+.social-buttons .item a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-color);
+  z-index: 0;
+  scale: 1 0;
+  transform-origin: bottom;
+  transition: scale 0.5s ease;
+}
+
+.social-buttons .item:hover a::before {
+  scale: 1 1;
+}
+
+.social-buttons .icon {
+  font-size: 2rem;
+  color: hsl(0, 0%, 0%);
+  transition: 0.5s ease;
+  z-index: 2;
+}
+
+.social-buttons .item a:hover .icon {
+  color: rgb(0, 0, 0) 000;
+  transform: rotateY(360deg);
+}
+
+.social-buttons .item:nth-child(1) {
+  --bg-color: linear-gradient(to bottom right, #f9ce34, #ee2a7b, #6228d7);
+}
+.social-buttons .item:nth-child(2) {
+  --bg-color: linear-gradient(to bottom right, #25d366, #075e54, #128c7e);
+}
+.social-buttons .item:nth-child(3) {
+  --bg-color: linear-gradient(to bottom right, #ff9800, #e0e0e0);
+}
+
+/*end*/
+
+/* Custom image */
+
+.logo-container {
+  top: 0;
+  right: 50px;
+  cursor: none;
+  z-index: 9998;
+  position: fixed;
+  isolation: isolate;
+  display: inline-grid;
+  place-content: center;
+  padding: 1em 1.5em;
+}
+
+.site-name {
+  margin-right: 10px;
+  color: rgb(255, 255, 255);
+}
+
+.logo2 {
+  cursor: none;
+}
+
+.logo2 img {
+  width: 40px; /* Adjust the width of the logo */
+  height: 40px;
+  cursor: none;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 9999;
+  cursor: none;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  cursor: none;
+  top: 100%;
+  right: 0;
+  background-color: #333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu a {
+  color: #000000;
+  cursor: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffffff;
+  cursor: none;
+}
+
+.set-button {
+  background-color: #ffffff; /* Green */
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 30px;
+  margin: 4px 2px;
+  cursor: none;
+  border: 4px solid rgb(76, 76, 76);
+}
+
+.set-button:hover {
+  border: 4px solid rgb(255, 189, 255);
+  background: linear-gradient(
+    rgb(83, 60, 89),
+    rgb(183, 75, 255),
+    rgb(236, 158, 255)
+  );
+  color: rgb(0, 0, 0);
+}
+
+.custom-image-input {
+  /* Style for file input */
+  border: 2px solid #b1b1b1; /* Green border */
+  border-radius: 10px;
+  color: black;
+  padding: 10px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: none;
+}
+
+.custom-image-input:hover {
+  background-color: #a0a0a0; /* Green */
+  color: rgb(0, 0, 0);
+}
+
+.custom-image-input:active {
+  background-color: #969696; /* Darker Green */
+  border: 2px solid #adadad; /* Green border */
+}
+
+/* Hide default browser styles for the list */
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  cursor: none;
+  padding: 0;
+}
+
+.logo2 {
+  cursor: none;
+  position: relative;
+  width: 35px; /* Adjust the width of the circular background */
+  height: 35px; /* Adjust the height of the circular background */
+  border-radius: 50%;
+  background-color: rgb(214, 208, 208); /* Greyish padding color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px; /* Add margin for separation from the site name */
+  border: 3px solid #a7a7a7ba; /* Thicker black border */
+}
+
+.logo2 img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%; /* Ensure the logo is also circular within the background */
+}
+
+/*Customize*/
+/* Add this in your existing CSS */
+.popup {
+  z-index: 9998;
+  display: none;
+  position: fixed;
+  top: 0;
+  cursor: none;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+/* Customize box */
+/* Add these styles in your existing CSS */
+/* Add these styles in your existing CSS */
+.popup-content {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: none;
+  transform: translate(-50%, -50%);
+  background-color: #000000;
+  padding: 20px; /* Adjusted padding for the window */
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Adjust the size and position of the close button */
+.close {
+  z-index: 9998;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px; /* Adjust the font size to make the button bigger */
+  cursor: none;
+}
+
+/* Adjust the size of the images in the grid */
+.image-grid img {
+  width: 80px; /* Adjust the width of the logos in the grid */
+  height: 80px; /* Adjust the height of the logos in the grid */
+  border-radius: 50%;
+  border: 2px solid #5c5c5c; /* Medium thickness black border */
+  cursor: none;
+  margin-bottom: 10px; /* Add margin between logos */
+  aspect-ratio: 1 / 1; /* Ensure a perfect circle */
+}
+
+.popup-content button {
+  margin-top: 20px; /* Adjust the margin-top value as needed */
+  cursor: none;
+}
+
+/*smaller logo*/
+/* Add these styles in your existing CSS */
+.dropdown-menu .logo2 {
+  text-align: center;
+  cursor: none;
+  padding: 10px;
+}
+
+/* Set a fixed size for the circular logo container in the dropdown menu */
+.dropdown-menu .logo2 img {
+  width: 50px; /* Adjust the width of the circular container */
+  height: 50px; /* Adjust the height of the circular container */
+  border-radius: 50%;
+
+  border: 2px solid #fff; /* Medium thickness white border */
+  margin-bottom: 10px; /* Add margin between logo and options */
+}
+
+/* Additional styles for the dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgb(136, 136, 136);
+}
+
+.dropdown-menu a {
+  color: #000000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-menu a:hover {
+  background-color: #ffffff;
+}
+
+/*Img container*/
+.circular-container {
+  width: 200px; /* Adjust the width of the circular container */
+  height: 200px; /* Adjust the height of the circular container */
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 10px; /* Adjust margin as needed */
+}
+
+.circular-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire container without distortion */
+  border-radius: 50%;
+  display: block;
+}
+
+/*Settings*/
+/* Add these styles to cust.css */
+.toggle-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle {
+  position: relative;
+  margin: 0 10px;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  border-radius: 34px;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #ffffff;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #000000;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Adjust these styles based on your design */
+.toggle-label-text {
+  color: #000000; /* Set your text color */
+}
+
+/* select character */
+input[type="checkbox"] + label img {
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label img {
+  border: 2px solid blue; /* Example border style when checked */
+}
+input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Faculty */
+.vision {
+  text-align: center;
+  padding: 20px;
+  background-color: #46a3eb;
+  color: #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  width: 80%;
+}
+.header-box {
+  width: 80%; /* Ensure the same width for both header and vision boxes */
+  margin: 20px auto;
+  padding: 20px;
+  background: linear-gradient(
+    135deg,
+    #2e4d6a,
+    #4673a2,
+    #5b8db8,
+    #4673a2,
+    #2e4d6a
+  ); /* Metallic gradient effect with the color tone #4673A2 */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+  text-align: center;
+  --header-text-color: #ffffff; /* White text color for contrast */
+  color: var(--header-text-color);
+  border-radius: 10px; /* Rounded corners for a modern look */
+  border: 1px solid #d1d1d1; /* Border to enhance the metallic effect */
+  position: relative;
+  z-index: 2; /* Ensure it appears above the vision box */
+}
+
+.header-box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.6) 0%,
+    rgba(255, 255, 255, 0) 50%
+  );
+  border-radius: 10px;
+  pointer-events: none;
+}
+
+.header-box h1 {
+  margin: 0;
+  font-size: 2em; /* Larger font size for emphasis */
+  letter-spacing: 2px; /* Spacing for a more dramatic effect */
+  text-transform: uppercase; /* Uppercase for a bold look */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Dark shadow for 3D effect */
+}
+
+.vision-box {
+  width: 80%; /* Ensure the same width for both header and vision boxes */
+  margin: -10px auto 20px; /* Adjust margin to bring it closer to the header */
+  padding: 20px;
+  background-color: #4673a2; /* Background color */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Subtle shadow for depth */
+  color: #ffffff; /* White text color */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  border: 1px solid #ffffff; /* Border to match the header box */
+  position: relative;
+  top: -20px; /* Positioning to move the box up behind the header box */
+  z-index: 1; /* Ensure it appears behind the header box */
+  text-align: center;
+}
+
+.vision-box h2 {
+  margin: 0 0 10px;
+  font-size: 1.5em; /* Slightly smaller than the main header */
+  letter-spacing: 1px; /* Spacing for a more dramatic effect */
+  text-transform: uppercase; /* Uppercase for a bold look */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow for subtle effect */
+  color: #ffffff; /* Set h2 text color to white */
+}
+
+.vision-box p {
+  margin: 0;
+  font-size: 1em; /* Normal font size for the vision text */
+  line-height: 1.5em; /* Line height for better readability */
+  color: #ffffff; /* Set p text color to white */
+}
+
+.container3 {
+  width: 80%; /* Adjust the width to your desired size */
+  height: auto; /* Adjust the height to your desired size */
+  margin: 50px auto;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.faculty {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faculty img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.faculty-info {
+  flex-grow: 1;
+}
+
+h2,
+p {
+  margin: 5px 0;
+}
